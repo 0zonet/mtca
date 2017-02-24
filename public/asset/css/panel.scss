@@ -1,0 +1,262 @@
+/*FONTS*/
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+
+/* VARS COLORS*/
+$blue: #3598DC;
+$dark-blue: darken($blue, 10%);
+$light-blue: lighten($blue, 10%);
+$gray: #ddd;
+$sweet-gray: #F7F8FB;
+$light-gray: lighten($gray, 1%);
+$dark-gray: darken($gray, 10%);
+/*OWN STYLES*/
+
+
+
+$alto-row: 55px;
+$alto-header: 70px;
+.product-list{
+	.container{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+	header{
+		background-color: $sweet-gray;
+		.container{
+			height: $alto-header;	
+		}
+		span{
+			font-size: 1.4em;
+			color: $blue;
+		}
+		a{
+			margin-left: auto;
+		}
+	}
+	.item-list{
+		height: $alto-row;
+		cursor: pointer;
+		box-shadow: 0 1px 0 0 $light-gray;
+		.container{ height: $alto-row;}
+		.title{
+			width: 50%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			margin: 0;
+		}
+		.actions{
+			width: 50%;
+			padding-left: 1em;
+			margin-left: auto;
+			display: flex;
+			justify-content: flex-end;
+		}
+		&:hover{
+			background-color: $light-gray;
+		}
+	}
+}
+
+.flex-wrapper{
+	padding: 1em;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#311ebf+0,168fd4+100,7db9e8+100 */
+	background: #311ebf;
+	background: linear-gradient(45deg,  #311ebf 0%,#168fd4 100%,#7db9e8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#311ebf', endColorstr='#7db9e8',GradientType=1 );
+}
+
+
+#footer{
+	align-self: flex-end;
+	width: 80%;
+	img{
+		opacity: .6;
+		display: block;
+		margin: auto;
+	}
+	p{
+		text-transform: uppercase;
+		color: $dark-gray;
+		font-size: 1.2rem;
+	}
+}
+
+#login{
+	input[type="email"],input[type="password"]{
+		font-size: 1em !important;
+	}
+	align-self: center;
+	margin-top: auto;
+}
+
+/*RESETS*/
+h1, h2,h3,h4,h5,h6, p, label, td, tr, th, button, input,span,a{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.jFiler-input-button{
+	background-image: none !important;
+}
+
+.btn-primary{
+	background-color: $blue;
+	border-color: $blue;
+	transition: .3s;
+	&:hover{
+		background-color: $dark-blue;
+		border-color: $dark-blue;
+	}
+}
+
+.btn-default{
+	border-color: $blue;
+	color: $blue;
+	&:hover{
+		border-color: $blue;
+		color: $blue;
+		background-color: $gray;
+	}
+}
+
+.panel{
+	border: none !important;
+	box-shadow: 0 0 0 1px $light-gray;
+}
+
+
+.navbar{
+	border:none;
+	margin-bottom: 0;
+	&:before, &:after{
+		display: none;
+	}
+	background-color: $blue;
+	a{
+		color: white;
+		a:hover{
+			color: $gray;
+		}
+	}
+}
+
+.navbar-default{
+	
+	.navbar-nav{
+		li{
+			a{
+				color: white;
+				&:hover{color: $gray;}
+				&.open{
+					background-color: $light-blue;
+				}
+			}
+		}
+		
+	}
+
+	.navbar-brand{
+			color: white;
+			
+			&:hover{
+				color: $gray;
+			}
+	}
+
+
+	.dropdown-menu{
+		a{
+			color: $blue !important;
+		}
+	}
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color: $light-blue;
+	color: white;
+}
+
+.row{
+	margin: 0 !important;
+}
+
+
+
+/*HELPERS*/
+
+/*Box helpers*/
+.top-space{	
+	margin-top: 1em;
+	&.x2{margin-top: 2em;}
+	&.x3{margin-top: 3em;}
+	&.x4{margin-top: 4em;}
+	&.x5{margin-top: 5em;}
+	
+	&.m1{margin-top: -1em;}
+	&.m2{margin-top: -2em;}
+	&.m3{margin-top: -3em;}
+	&.m4{margin-top: -4em;}
+	&.m5{margin-top: -5em;}
+}
+
+.bottom-space{
+	margin-bottom: 1em;
+}
+
+.padding{
+	padding: 1em;
+	&.px2{padding: 2em;}
+	&.px3{padding: 3em;}
+	&.px4{padding: 4em;}
+	&.px5{padding: 5em;}
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.no-margin{
+	margin: 0;
+}
+.overflow-hidden{
+	overflow: hidden;
+}
+
+/*Texts helpers*/
+.slim{font-weight: 300;}
+.bold{font-weight: bold;}
+
+/*Colors hepers*/
+
+/*text*/
+.blue-text{color: $blue;}
+.light-blue-text{color: $light-blue;}
+/*background*/
+.white{background-color: white;}
+
+
+/*Media queryes*/
+
+@media (max-width: 768px){
+	.flex-wrapper{
+		padding: .5em;
+		height: auto;
+		min-height: 100vh !important;
+	}
+
+	.navbar-toggle{
+		margin-right: 0 !important;
+	}
+	.navbar-brand{
+		padding-left: 0 !important;
+	}
+}
